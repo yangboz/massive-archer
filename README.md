@@ -5,7 +5,9 @@ Coding test for GoGO Tech Limited!
 
 ## GoGo Coding testing here:
 
-### Live:http://pastebin.com/QtYNB2Av
+### Live: https://www.marinetraffic.com/en/
+
+### Forum: http://pastebin.com/QtYNB2Av
 
 ### Raw:
 
