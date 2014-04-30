@@ -3,13 +3,7 @@ massive-archer
 
 Coding test for GoGO Tech Limited!
 
-## GoGo coding test here:
-
-### Live: https://www.marinetraffic.com/en/
-
-### Forum: http://pastebin.com/QtYNB2Av
-
-### Raw:
+### GoGo coding test here:
 
 GoGo Tech Limited - iOS / Android app developer
  
