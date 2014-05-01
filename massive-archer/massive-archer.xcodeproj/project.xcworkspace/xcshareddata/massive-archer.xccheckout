@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0B27E8B3-B361-43F4-9E4C-DAAF5A026F5B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>massive-archer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CC27D19B-321F-42A6-A46A-27F2876BC1B7</key>
+		<string>https://github.com/yangboz/massive-archer.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>massive-archer/massive-archer.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CC27D19B-321F-42A6-A46A-27F2876BC1B7</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yangboz/massive-archer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CC27D19B-321F-42A6-A46A-27F2876BC1B7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CC27D19B-321F-42A6-A46A-27F2876BC1B7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>massive-archer</string>
+		</dict>
+	</array>
+</dict>
+</plist>
