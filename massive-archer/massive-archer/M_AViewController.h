@@ -12,6 +12,6 @@
 @interface M_AViewController : UIViewController
 <CLLocationManagerDelegate>
 {
-
+    CLLocationManager *locationManager;
 }
 @end

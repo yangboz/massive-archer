@@ -18,14 +18,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.distanceFilter = 1000;//1km
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     if ([CLLocationManager locationServicesEnabled]) {
         [locationManager startUpdatingLocation];
     }else{
         NSLog(@"Location service is not enabled!!!");
     }
+    //
+    [self hackLocationFix];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,4 +49,18 @@
     [manager stopUpdatingLocation];
 }
 
+#pragma mark - HackLocationFix
+- (void)hackLocationFix
+{
+    //CLLocation *location = [[CLLocation alloc] initWithLatitude:42 longitude:-50];
+    float latitude = 26.876812;
+    float longitude = 100.22569199999998;  //Any value;
+    CLLocation *location= [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
+    [self locationManager:locationManager didUpdateLocation:location fromLocation:nil];
+}
+
+- (void)startUpdatingLocation
+{
+    [self performSelector:@selector(hackLocationFix) withObject:nil afterDelay:0.1];
+}
 @end
