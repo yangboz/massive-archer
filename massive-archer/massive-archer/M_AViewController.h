@@ -10,8 +10,12 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface M_AViewController : UIViewController
-<CLLocationManagerDelegate>
+<CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     CLLocationManager *locationManager;
 }
+//Properties
+@property(strong,nonatomic) NSMutableArray *rows;
+//IBActions
+@property(strong,nonatomic) IBOutlet UITableView *tableView;
 @end
