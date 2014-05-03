@@ -48,6 +48,12 @@
     timer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(onTimerUpdate:) userInfo:nil repeats:NO];
     //Show user location
     self.mapView.showsUserLocation = YES;
+    //Add annotation with HongKong
+    CLLocationCoordinate2D hongKongCoord = {22,114};
+    M_AAnnotation *hongKongAnnotation = [[M_AAnnotation alloc] initWithCoordinate:hongKongCoord];
+    hongKongAnnotation.title = @"Hong Kong";
+    hongKongAnnotation.subtitle = @"22,114";
+    [self.mapView addAnnotation:hongKongAnnotation];
 }
 
 - (void)onTimerUpdate:(NSTimer *)timer
@@ -78,6 +84,15 @@
     [self.rows insertObject:latitude atIndex:0]; [self.rows insertObject:longitude atIndex:1]; [self.rows insertObject:altitude atIndex:2]; [self.rows insertObject:speed atIndex:3];
     [self.rows insertObject:course atIndex:4];
     [self.tableView reloadData];
+    //Monitor or upate mapview
+    double miles = 2.0;
+    double scalingFactor =
+    ABS( cos(2 * M_PI * newLocation.coordinate.latitude /360.0) );
+    MKCoordinateSpan span;
+    span.latitudeDelta = miles/69.0; span.longitudeDelta = miles/( scalingFactor*69.0 ); MKCoordinateRegion region;
+    region.span = span;
+    region.center = newLocation.coordinate;
+    [self.mapView setRegion:region animated:YES];
 }
 
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
@@ -91,8 +106,8 @@
 {
     //CLLocation *location = [[CLLocation alloc] initWithLatitude:42 longitude:-50];
     //TODO:fixture,sw_x: 112, sw_y: 21, ne_x: 117, ne_y: 24, zoom: 9
-    float latitude = 26.876812;
-    float longitude = 100.22569199999998;  //Any value;
+    float latitude = 22;
+    float longitude = 114;  //Any value;
     CLLocation *newLocation= [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
     CLLocation *oldLocation= [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
     [self locationManager:locationManager didUpdateLocation:newLocation fromLocation:oldLocation];

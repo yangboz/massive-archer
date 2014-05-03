@@ -23,6 +23,7 @@
 		653D20C41912A929007A19E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 653D20C21912A929007A19E1 /* InfoPlist.strings */; };
 		653D20C61912A929007A19E1 /* massive_archerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 653D20C51912A929007A19E1 /* massive_archerTests.m */; };
 		653D20D01912A958007A19E1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 653D20CF1912A958007A19E1 /* MapKit.framework */; };
+		653D20D319155DFB007A19E1 /* M_AAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 653D20D219155DFB007A19E1 /* M_AAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		653D20C31912A929007A19E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		653D20C51912A929007A19E1 /* massive_archerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = massive_archerTests.m; sourceTree = "<group>"; };
 		653D20CF1912A958007A19E1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		653D20D119155DFB007A19E1 /* M_AAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M_AAnnotation.h; sourceTree = "<group>"; };
+		653D20D219155DFB007A19E1 /* M_AAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M_AAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				653D20B01912A929007A19E1 /* M_AViewController.m */,
 				653D20B21912A929007A19E1 /* Images.xcassets */,
 				653D209E1912A929007A19E1 /* Supporting Files */,
+				653D20D119155DFB007A19E1 /* M_AAnnotation.h */,
+				653D20D219155DFB007A19E1 /* M_AAnnotation.m */,
 			);
 			path = "massive-archer";
 			sourceTree = "<group>";
@@ -258,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653D20D319155DFB007A19E1 /* M_AAnnotation.m in Sources */,
 				653D20A81912A929007A19E1 /* M_AAppDelegate.m in Sources */,
 				653D20B11912A929007A19E1 /* M_AViewController.m in Sources */,
 				653D20A41912A929007A19E1 /* main.m in Sources */,

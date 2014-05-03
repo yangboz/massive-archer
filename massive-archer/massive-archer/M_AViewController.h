@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "M_AAnnotation.h"
 
 @interface M_AViewController : UITableViewController
 <CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate>
