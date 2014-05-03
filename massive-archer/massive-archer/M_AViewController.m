@@ -26,7 +26,7 @@
     locationManager.distanceFilter = 1000;//1km
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     if ([CLLocationManager locationServicesEnabled]) {
-        [locationManager startUpdatingLocation];
+//        [locationManager startUpdatingLocation];
     }else{
         NSLog(@"Location service is not enabled!!!");
     }
@@ -38,13 +38,22 @@
     // Device
     #endif
     //TableView rows data fixture
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    //
     self.rows = [[NSMutableArray alloc] initWithCapacity:5];
     [self.rows insertObject:@"Lat." atIndex:0];
     [self.rows insertObject:@"Long." atIndex:1];
     [self.rows insertObject:@"Alt." atIndex:2];
     [self.rows insertObject:@"Speed" atIndex:3];
     [self.rows insertObject:@"Course" atIndex:4];
-    
+    //Update timer in seconds
+    timer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(onTimerUpdate:) userInfo:nil repeats:NO];
+}
+
+- (void)onTimerUpdate:(NSTimer *)timer
+{
+    [locationManager startUpdatingLocation];
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,6 +73,8 @@
     NSString *speed = [NSString stringWithFormat:@"Speed %f m/s", newLocation.speed];
     NSString *course =
     [NSString stringWithFormat:@"Course %f degrees", newLocation.course];
+    //
+    self.rows = [[NSMutableArray alloc] initWithCapacity:5];
     [self.rows insertObject:latitude atIndex:0]; [self.rows insertObject:longitude atIndex:1]; [self.rows insertObject:altitude atIndex:2]; [self.rows insertObject:speed atIndex:3];
     [self.rows insertObject:course atIndex:4];
     [self.tableView reloadData];

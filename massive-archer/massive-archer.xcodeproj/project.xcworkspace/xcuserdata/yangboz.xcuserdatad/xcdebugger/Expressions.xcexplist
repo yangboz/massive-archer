@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[M_AViewController locationManager:didUpdateLocation:fromLocation:]:M_AViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.rows">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[M_AViewController tableView:cellForRowAtIndexPath:]:M_AViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.rows">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

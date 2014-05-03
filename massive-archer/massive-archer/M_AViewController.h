@@ -13,9 +13,10 @@
 <CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     CLLocationManager *locationManager;
+    NSTimer *timer;
 }
 //Properties
-@property(strong,nonatomic) NSMutableArray *rows;
+@property(retain,nonatomic) NSMutableArray *rows;
 //IBActions
 @property(strong,nonatomic) IBOutlet UITableView *tableView;
 @end
