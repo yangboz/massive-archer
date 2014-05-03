@@ -88,6 +88,7 @@
 - (void)hackLocationFix
 {
     //CLLocation *location = [[CLLocation alloc] initWithLatitude:42 longitude:-50];
+    //TODO:fixture,sw_x: 112, sw_y: 21, ne_x: 117, ne_y: 24, zoom: 9
     float latitude = 26.876812;
     float longitude = 100.22569199999998;  //Any value;
     CLLocation *newLocation= [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
@@ -125,13 +126,17 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *identifier = @"cell"; UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if ( cell == nil ) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        cell.accessoryType = UITableViewCellStyleDefault;
+    UITableViewCell *cell = nil;
+    if ( indexPath.section == 0 ) {
+        cell = self.mapCell;
+    } else {
+        static NSString *identifier = @"cell";
+        cell = [tableView dequeueReusableCellWithIdentifier:@"cell"]; if ( cell == nil ) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+            cell.accessoryType = UITableViewCellAccessoryNone;
+            cell.textLabel.text = [self.rows objectAtIndex:indexPath.row];
+        }
     }
-    cell.textLabel.text = [self.rows objectAtIndex:indexPath.row];
-
     return cell;
 }
 

@@ -17,6 +17,9 @@
 }
 //Properties
 @property(strong,nonatomic) NSMutableArray *rows;
+//IBOutlets
+@property(strong,nonatomic) IBOutlet UITableViewCell *mapCell;
+@property(weak,nonatomic) IBOutlet MKMapView *mapView;
 //IBActions
 @property(strong,nonatomic) IBOutlet UITableView *tableView;
 @end
