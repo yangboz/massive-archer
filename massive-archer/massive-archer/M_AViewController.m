@@ -28,7 +28,12 @@
         NSLog(@"Location service is not enabled!!!");
     }
     //
+    #if TARGET_IPHONE_SIMULATOR
+    //Simulator
     [self hackLocationFix];
+    #else
+    // Device
+    #endif
 }
 
 - (void)didReceiveMemoryWarning
