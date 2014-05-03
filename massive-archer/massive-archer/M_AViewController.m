@@ -46,6 +46,8 @@
     [self.rows insertObject:@"Course" atIndex:4];
     //Update timer in seconds
     timer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(onTimerUpdate:) userInfo:nil repeats:NO];
+    //Show user location
+    self.mapView.showsUserLocation = YES;
 }
 
 - (void)onTimerUpdate:(NSTimer *)timer
@@ -134,8 +136,8 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"cell"]; if ( cell == nil ) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
             cell.accessoryType = UITableViewCellAccessoryNone;
-            cell.textLabel.text = [self.rows objectAtIndex:indexPath.row];
         }
+        cell.textLabel.text = [self.rows objectAtIndex:indexPath.row];
     }
     return cell;
 }
