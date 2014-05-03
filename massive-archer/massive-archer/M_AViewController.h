@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface M_AViewController : UIViewController
+@interface M_AViewController : UITableViewController
 <CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     CLLocationManager *locationManager;
     NSTimer *timer;
 }
 //Properties
-@property(retain,nonatomic) NSMutableArray *rows;
+@property(strong,nonatomic) NSMutableArray *rows;
 //IBActions
 @property(strong,nonatomic) IBOutlet UITableView *tableView;
 @end

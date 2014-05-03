@@ -26,7 +26,7 @@
     locationManager.distanceFilter = 1000;//1km
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     if ([CLLocationManager locationServicesEnabled]) {
-//        [locationManager startUpdatingLocation];
+        [locationManager startUpdatingLocation];
     }else{
         NSLog(@"Location service is not enabled!!!");
     }
@@ -37,9 +37,6 @@
     #else
     // Device
     #endif
-    //TableView rows data fixture
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
     //
     self.rows = [[NSMutableArray alloc] initWithCapacity:5];
     [self.rows insertObject:@"Lat." atIndex:0];
@@ -53,7 +50,8 @@
 
 - (void)onTimerUpdate:(NSTimer *)timer
 {
-    [locationManager startUpdatingLocation];
+//    [locationManager startUpdatingLocation];
+    [self hackLocationFix];
 }
 
 - (void)didReceiveMemoryWarning
@@ -111,12 +109,18 @@
 #pragma mark - UITableViewDataSource Methods
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    if ( section == 0 ) {
+        return 1;
+    } else if ( section == 1 ) {
+        return 5;
+    } else {
+        return 1;
+    }
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
