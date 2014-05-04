@@ -11,6 +11,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[M_AViewController tableView:cellForRowAtIndexPath:]:M_AViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.rows">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[M_AViewController mapView:viewForOverlay:]:M_AViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -19,10 +27,16 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[M_AViewController tableView:cellForRowAtIndexPath:]:M_AViewController.m">
+         contextName = "-[JsonParseProxy parseJsonRawData:]:JsonParseProxy.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.rows">
+               value = "rawData">
+            </PersistentString>
+            <PersistentString
+               value = "[array count]">
+            </PersistentString>
+            <PersistentString
+               value = "rawDataParsed">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

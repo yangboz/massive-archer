@@ -24,6 +24,11 @@
 		653D20C61912A929007A19E1 /* massive_archerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 653D20C51912A929007A19E1 /* massive_archerTests.m */; };
 		653D20D01912A958007A19E1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 653D20CF1912A958007A19E1 /* MapKit.framework */; };
 		653D20D319155DFB007A19E1 /* M_AAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 653D20D219155DFB007A19E1 /* M_AAnnotation.m */; };
+		653D230F19167ED5007A19E1 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 653D230A19167ED5007A19E1 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		653D231019167ED5007A19E1 /* JsonParseProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 653D230C19167ED5007A19E1 /* JsonParseProxy.m */; };
+		653D231D191681CB007A19E1 /* 8vELHLAE#.json in Resources */ = {isa = PBXBuildFile; fileRef = 653D231C191681CB007A19E1 /* 8vELHLAE#.json */; };
+		653D232019168E7D007A19E1 /* M_ADataFeedVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 653D231F19168E7D007A19E1 /* M_ADataFeedVO.m */; };
+		653D232319168E9A007A19E1 /* M_ADataFeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 653D232219168E9A007A19E1 /* M_ADataFeedModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +65,15 @@
 		653D20CF1912A958007A19E1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		653D20D119155DFB007A19E1 /* M_AAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M_AAnnotation.h; sourceTree = "<group>"; };
 		653D20D219155DFB007A19E1 /* M_AAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M_AAnnotation.m; sourceTree = "<group>"; };
+		653D230919167ED5007A19E1 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		653D230A19167ED5007A19E1 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		653D230B19167ED5007A19E1 /* JsonParseProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonParseProxy.h; sourceTree = "<group>"; };
+		653D230C19167ED5007A19E1 /* JsonParseProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonParseProxy.m; sourceTree = "<group>"; };
+		653D231C191681CB007A19E1 /* 8vELHLAE#.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "8vELHLAE#.json"; sourceTree = "<group>"; };
+		653D231E19168E7D007A19E1 /* M_ADataFeedVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M_ADataFeedVO.h; sourceTree = "<group>"; };
+		653D231F19168E7D007A19E1 /* M_ADataFeedVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M_ADataFeedVO.m; sourceTree = "<group>"; };
+		653D232119168E9A007A19E1 /* M_ADataFeedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M_ADataFeedModel.h; sourceTree = "<group>"; };
+		653D232219168E9A007A19E1 /* M_ADataFeedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M_ADataFeedModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +135,8 @@
 		653D209D1912A929007A19E1 /* massive-archer */ = {
 			isa = PBXGroup;
 			children = (
+				653D231119167F03007A19E1 /* model */,
+				653D230419167E9F007A19E1 /* JSON */,
 				653D20A61912A929007A19E1 /* M_AAppDelegate.h */,
 				653D20A71912A929007A19E1 /* M_AAppDelegate.m */,
 				653D20A91912A929007A19E1 /* Main_iPhone.storyboard */,
@@ -162,6 +178,37 @@
 				653D20C21912A929007A19E1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		653D230419167E9F007A19E1 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				653D230919167ED5007A19E1 /* JSONKit.h */,
+				653D230A19167ED5007A19E1 /* JSONKit.m */,
+				653D230B19167ED5007A19E1 /* JsonParseProxy.h */,
+				653D230C19167ED5007A19E1 /* JsonParseProxy.m */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		653D231119167F03007A19E1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				653D231C191681CB007A19E1 /* 8vELHLAE#.json */,
+				653D232119168E9A007A19E1 /* M_ADataFeedModel.h */,
+				653D232219168E9A007A19E1 /* M_ADataFeedModel.m */,
+				653D231219167F0D007A19E1 /* vo */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		653D231219167F0D007A19E1 /* vo */ = {
+			isa = PBXGroup;
+			children = (
+				653D231E19168E7D007A19E1 /* M_ADataFeedVO.h */,
+				653D231F19168E7D007A19E1 /* M_ADataFeedVO.m */,
+			);
+			name = vo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +291,7 @@
 				653D20AE1912A929007A19E1 /* Main_iPad.storyboard in Resources */,
 				653D20B31912A929007A19E1 /* Images.xcassets in Resources */,
 				653D20AB1912A929007A19E1 /* Main_iPhone.storyboard in Resources */,
+				653D231D191681CB007A19E1 /* 8vELHLAE#.json in Resources */,
 				653D20A21912A929007A19E1 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,10 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653D232319168E9A007A19E1 /* M_ADataFeedModel.m in Sources */,
 				653D20D319155DFB007A19E1 /* M_AAnnotation.m in Sources */,
+				653D232019168E7D007A19E1 /* M_ADataFeedVO.m in Sources */,
 				653D20A81912A929007A19E1 /* M_AAppDelegate.m in Sources */,
+				653D231019167ED5007A19E1 /* JsonParseProxy.m in Sources */,
 				653D20B11912A929007A19E1 /* M_AViewController.m in Sources */,
 				653D20A41912A929007A19E1 /* main.m in Sources */,
+				653D230F19167ED5007A19E1 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

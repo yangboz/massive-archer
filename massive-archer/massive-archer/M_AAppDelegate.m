@@ -7,13 +7,23 @@
 //
 
 #import "M_AAppDelegate.h"
+#import "JsonParseProxy.h"
 
 @implementation M_AAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    //By extracting the data feed here.
+    [self ExtractingDataFeed];
     return YES;
+}
+
+- (void)ExtractingDataFeed
+{
+    JsonParseProxy *parser = [JsonParseProxy new];
+    //Do parse using local file bundle.
+    [parser parseJsonFile:@"8vELHLAE#"];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
