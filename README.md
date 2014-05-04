@@ -3,6 +3,11 @@ massive-archer
 
 Coding test for GoGO Tech Limited!
 
+### Snapshots:
+
+![Screenshot01](https://raw.githubusercontent.com/yangboz/massive-archer/master/snapshot_01.png)
+
+
 ### GoGo coding test here:
 
 GoGo Tech Limited - iOS / Android app developer
