@@ -32,3 +32,13 @@ If you fail to extract the feed, you can use this snapshot: http://pastebin.com/
 - Compatibility: 20% Does the app adapt gracefully to different device configurations / orientations / screen sizes?
  
 - UI aesthetics: 10%
+
+* * *
+
+### Gist for JSON raw data:
+
+http://pastebin.com/8vELHLAE ---> https://gist.github.com/yangboz/c004c4dcdd0886e0aaec
+
+### Code reference book:
+
+http://shop.oreilly.com/product/0636920021155.do
