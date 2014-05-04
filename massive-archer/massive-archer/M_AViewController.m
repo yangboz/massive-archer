@@ -8,6 +8,10 @@
 
 #import "M_AViewController.h"
 
+#define HONGKONG_LATITUTE 22.15
+#define HONGKONG_LONGITTUTE 114.10
+#define HONGKONG_TITLE @"Hong Kong"
+
 @interface M_AViewController ()
 
 @end
@@ -16,6 +20,7 @@
 
 @synthesize tableView = _tableView;
 @synthesize rows = _rows;
+@synthesize searchBar = _searchBar;
 
 - (void)viewDidLoad
 {
@@ -49,11 +54,20 @@
     //Show user location
     self.mapView.showsUserLocation = YES;
     //Add annotation with HongKong
-    CLLocationCoordinate2D hongKongCoord = {22,114};
+    CLLocationCoordinate2D hongKongCoord = {HONGKONG_LATITUTE,HONGKONG_LONGITTUTE};
     M_AAnnotation *hongKongAnnotation = [[M_AAnnotation alloc] initWithCoordinate:hongKongCoord];
-    hongKongAnnotation.title = @"Hong Kong";
-    hongKongAnnotation.subtitle = @"22,114";
+    hongKongAnnotation.title = HONGKONG_TITLE;
+    hongKongAnnotation.subtitle = @"22° 15' 0' N / 114° 10' 0' E";
     [self.mapView addAnnotation:hongKongAnnotation];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    CLLocationCoordinate2D hongKongCenter = CLLocationCoordinate2DMake(22, 114);
+    CLLocationDistance radius = 300.0;
+    MKCircle *circle = [MKCircle circleWithCenterCoordinate:hongKongCenter radius:radius];
+    [circle setTitle:@" "];
+    [self.mapView addOverlay:circle];
 }
 
 - (void)onTimerUpdate:(NSTimer *)timer
@@ -85,7 +99,7 @@
     [self.rows insertObject:course atIndex:4];
     [self.tableView reloadData];
     //Monitor or upate mapview
-    double miles = 2.0;
+    double miles = 40.0;//Map Pan Zoom value.
     double scalingFactor =
     ABS( cos(2 * M_PI * newLocation.coordinate.latitude /360.0) );
     MKCoordinateSpan span;
@@ -106,8 +120,8 @@
 {
     //CLLocation *location = [[CLLocation alloc] initWithLatitude:42 longitude:-50];
     //TODO:fixture,sw_x: 112, sw_y: 21, ne_x: 117, ne_y: 24, zoom: 9
-    float latitude = 22;
-    float longitude = 114;  //Any value;
+    float latitude = HONGKONG_LATITUTE;
+    float longitude = HONGKONG_LONGITTUTE;  //Any value;
     CLLocation *newLocation= [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
     CLLocation *oldLocation= [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
     [self locationManager:locationManager didUpdateLocation:newLocation fromLocation:oldLocation];
@@ -157,4 +171,16 @@
     return cell;
 }
 
+#pragma mark - MKMapViewDelegate
+-(MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay
+{
+    //Overlay circle configuation.
+    MKCircle *circle = overlay;
+    MKCircleView *circleView = [[MKCircleView alloc] initWithCircle:circle];
+    if ([circle.title isEqualToString:HONGKONG_TITLE]) {
+        circleView.fillColor = [UIColor redColor];
+        circleView.alpha = 0.4;
+    }
+    return circleView;
+}
 @end

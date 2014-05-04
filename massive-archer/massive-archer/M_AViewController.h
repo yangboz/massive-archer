@@ -11,7 +11,7 @@
 #import "M_AAnnotation.h"
 
 @interface M_AViewController : UITableViewController
-<CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate>
+<CLLocationManagerDelegate,UITableViewDataSource,UITableViewDelegate,MKMapViewDelegate>
 {
     CLLocationManager *locationManager;
     NSTimer *timer;
@@ -21,6 +21,7 @@
 //IBOutlets
 @property(strong,nonatomic) IBOutlet UITableViewCell *mapCell;
 @property(weak,nonatomic) IBOutlet MKMapView *mapView;
+@property(strong,nonatomic) IBOutlet UISearchBar *searchBar;
 //IBActions
 @property(strong,nonatomic) IBOutlet UITableView *tableView;
 @end

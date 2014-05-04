@@ -11,6 +11,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[M_AViewController mapView:viewForOverlay:]:M_AViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "circle.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[M_AViewController tableView:cellForRowAtIndexPath:]:M_AViewController.m">
          <PersistentStrings>
             <PersistentString
