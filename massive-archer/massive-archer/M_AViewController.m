@@ -59,6 +59,8 @@
     hongKongAnnotation.title = HONGKONG_TITLE;
     hongKongAnnotation.subtitle = @"22° 15' 0' N / 114° 10' 0' E";
     [self.mapView addAnnotation:hongKongAnnotation];
+    //Select it to display
+    [self.mapView selectAnnotation:hongKongAnnotation animated:YES];
 }
 
 - (void)viewDidAppear:(BOOL)animated
