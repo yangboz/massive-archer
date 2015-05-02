@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>165D6E28-A90A-405B-BD23-60DFB00EF0F8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MortgageCalculator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>567636105B92A0DD8FD8969980B81861CA53435B</key>
+		<string>https://github.com/yangboz/massive-archer.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MortgageCalculator/MortgageCalculator.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>567636105B92A0DD8FD8969980B81861CA53435B</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yangboz/massive-archer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>567636105B92A0DD8FD8969980B81861CA53435B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>567636105B92A0DD8FD8969980B81861CA53435B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>massive-archer</string>
+		</dict>
+	</array>
+</dict>
+</plist>
